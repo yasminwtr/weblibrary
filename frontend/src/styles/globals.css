@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin: 0;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 2em 4em 0 4em;
+  box-sizing: border-box;
+}
+
+.filters-list {
+  width: 15%;
+}
+
+.search-input-filter {
+  margin: -1em 0 1em 0;
+}
+
+.content {
+  width: 82%;
+  padding-bottom: 4em;
+  box-sizing: border-box;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 40px 16px;
+  justify-items: stretch;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.book-image {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-image: url('https://static.estantevirtual.com.br/book/00/062-9750-000/062-9750-000_detail1.jpg?ts=1712764631610&ims=fit-in/x700/filters:fill(fff):quality(100)');
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.title-and-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#author {
+  font-size: 12px;
+  margin-top: 0.2em;
+}
+
+#title {
+  flex: 0 0 78%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.rating span:nth-child(1) {
+  margin-right: 0.2em;
+}
+
+.books-pagination {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: 3em auto 0 auto;
+}
+
+.pagination-button {
+  border-radius: 4em;
+  min-width: 1em;
+  background-color: transparent;
+}
+
+#title-total-found {
+  margin-bottom: 1.5em;
+}
+
+.search-input {
+  min-width: 30vw !important;
+}
+
+header {
+  min-width: 90vw !important;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #053B48;
+}
+
+.form-login {
+  min-width: 30vw;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 2em;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.book-info-container{
+  width: 100%;
+  padding: 1.5em 10% 0 10%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.book-info-image {
+  width: 32%;
+  height: 72vh;
+  background-size: cover;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.book-info{
+  padding: 1em 0;
+  width: 66%;
+}
+
+.modal{
+  overflow-x: hidden !important;
+}
+
+.divider{
+  height: 1px;
+}
+
+.scroll-thin::-webkit-scrollbar {
+  width: 6px; 
+  height: 6px;
+}
+
+.scroll-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+  .book {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .book {
+    width: 100%;
+  }
+}

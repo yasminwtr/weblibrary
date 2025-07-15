@@ -1,0 +1,33 @@
+# === GLOBAL ===
+.DS_Store
+*.log
+*.pem
+*.tsbuildinfo
+*.env
+*.env.local
+*.env.*.local
+.env*
+
+# === NODE ===
+**/node_modules/
+**/dist/
+**/build/
+**/coverage/
+**/yarn.lock
+**/pnpm-lock.yaml
+
+# === FRONTEND (Next.js) ===
+frontend/.next/
+frontend/out/
+frontend/.vercel/
+frontend/next-env.d.ts
+
+# === BACKEND (Fastify + Prisma) ===
+backend/prisma/dev.db
+backend/prisma/dev.db-journal
+
+# === DEBUG FILES ===
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
